@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+main{}
+.main_visual{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  /* height:70vh; 높이 상대단위 */
+}
+.main_visual .swiper{position:relative;  width:100%;}
+.main_visual > h2{display:none;}
+.main_visual img{
+  display:block;width:100%;
+}
+
+#cont1, #cont2, #cont3, #cont4, #cont5{
+  width: 1200px;
+  padding: 30px 0px;
+  margin:60px auto; /* 화면 중앙에 콘텐츠 배치 */
+  background-color:#cccccc;
+}
+/*html, body{
+  scroll-behavior: smooth;
+}*/  
+
+/*2콘텐츠 파스쿠치 스토리*/
+
+#cont1{padding: 30px 0px;}
+.c_title{
+  font-size: 30px;
+  line-height: 40px;
+}
+.sub_title{
+  font-size: 16px;
+  font-family: '바탕체',sans-serif;
+}
+.c_title, .sub_title, .tab_menu{
+  text-align: center;
+}
+#cont1 > p{}
+
+.tab_menu{padding-top: 60px;}
+/*탭메뉴 서식*/
+.tab_menu .menu_btn{
+  display: inline-block;
+  width: 100px; 
+  padding: 6px 0px; margin: 0px 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #211613;
+  color: #faf9f9;
+}
+.tab_menu input[type=radio]{
+  display: none;
+}
+.tab_menu input[type=radio]:checked + .menu_btn{
+  background-color: #f00 ;
+}
+/*시즌메뉴박스, 인기메뉴 박스 숨기기*/
+.season_m, .hit_m{
+  display: none;
+  margin-top: 40px;
+}
+.tab_menu #tab_01:checked ~ .season_m{
+  display: block;
+}
+.tab_menu #tab_02:checked ~ .hit_m{
+  display: block;
+}
+.product_price{
+  display: inline-block;
+}
+/*스와이퍼 슬라이드*/
+.season_m{}
+.mySwiper2{position: relative;}
+.myswiper2 .swiper{
+  text-align: center;
+}
+.mySwiper2 figure{ width: 220px; height: 250px;
+display: inline-block;}
+.mySwiper2 img{width: 100%;
+} 
+
+/*콘텐츠 파스쿠치 이벤트 서식*/
+.mySwiper3 img{
+  width: 330px; height: 200px;
+}
+.mySwiper3{position: relative;}
+.mySwiper3 .swiper{
+  text-align: center;
+}
+/*이벤트 콘텐츠 불렛 버튼 서식*/
+.mySwiper3 > .swiper-pagination{
+  display:i ;
+}
+
+/*콘텐츠 파스쿠치 뉴스 서식*/
+.b_news{
+  position: relative;
+  width: 540px;height: 190px;
+  display: flex;
+  border: 1px solid#000;
+}
+.b_news img{
+  display: inline-block;
+  width: 170px; height: 170px;
+  margin: 5px;
+}
+.b_news h3, p{
+  position: absolute;
+  display: inline;
+  top: 0px;
+}
+
+/*더보기 버튼서식*/
+.more_btn{
+}
+.more_btn > a{
+  padding: 5px 25px;
+  display: block;
+  width: 130px; height: 32px;
+  margin: 70px auto 0px auto;
+  border: 1px solid#211613;
+  box-sizing: border-box;
+  font-size: 14px;
+  background: #fff;
+  transition: 0.3s;
+  text-align: center;
+}
+.more_btn > a:hover{
+  background-color: #E41937;
+  border: none;
+  color: #fff;
+  border: 1px solid#E41937;
+}
+
+/*마지막 콘텐츠*/
+#con4{}
+.content_wrap{margin-top: 60px;}
+.content_wrap > ul{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.content_wrap > ul > li{
+  width: 290px; height: 290px;
+  border-radius: 50%;
+  border: 1px solid#Fff;
+}
+.content_wrap > ul > li:hover{
+  border: 1px solid#6A1820;
+}
+.content_wrap .circle{
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background-color: #6A1820;
+  text-align: center;
+  transform: translate(5px,5px);
+}
+.content_wrap .circle a{
+  display: inline-block;
+  padding-top: 80px;
+}
+.content_wrap .circle a img{
+  width: 50px;
+  padding-bottom: 20px;
+  transition: 0.5s;
+}
+.content_wrap >ul >li:hover img{
+    transform: translateY(-10px);
+    transform: scale(1.2);
+}
+
+.content_wrap >ul >li:hover::before{
+  content: "";
+  display: block;
+  width: 52px;height: 32px;
+  background-image: url(../images/tri.png);
+  position: absolute; bottom: -46px;
+  z-index: 10;
+}
+.content_wrap >ul >li:first-child:hover::before{
+  left: 170px;
+}
+.content_wrap >ul >li:nth-child(2):hover::before{
+  left: 580px;
+}
+.content_wrap >ul >li:nth-child(3):hover::before{
+  right: 170px;
+}
+.content_wrap >ul >li:hover::after{
+  content:"";
+  display: block;
+  width: 1200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 1px solid#6A1820;
+  position: absolute;
+  left: 0px; top: 332px;
+}
+.content_wrap .circle a span{
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+.caption{
+  width: 1200px; height: 150px;
+  border: 1px solid#6A1820;
+  position: absolute;
+  top: 325px; left: 0px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 100px;
+  display: none;
+}
+.content_wrap >ul >li:hover .caption{
+  display: block;
+}
